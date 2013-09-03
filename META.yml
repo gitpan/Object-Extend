@@ -1,5 +1,5 @@
 ---
-abstract: 'add or override per-object methods'
+abstract: 'add and override per-object methods'
 author:
   - 'chocolateboy <chocolate@cpan.org>'
 build_requires:
@@ -17,9 +17,10 @@ no_index:
   directory:
     - t
     - inc
-requires: {}
+requires:
+  Scalar::Util: 0
 resources:
   repository: https://github.com/chocolateboy/Object-Extend
-version: v0.0.1
+version: v0.1.0
 x_test_requires:
   Test::More: 0
