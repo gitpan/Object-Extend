@@ -32,7 +32,8 @@
       },
       "runtime" : {
          "requires" : {
-            "Scalar::Util" : "0"
+            "Scalar::Util" : "0",
+            "Storable" : "2.05"
          }
       }
    },
@@ -42,7 +43,7 @@
          "url" : "https://github.com/chocolateboy/Object-Extend"
       }
    },
-   "version" : "v0.1.1",
+   "version" : "v0.2.0",
    "x_test_requires" : {
       "Test::More" : 0
    }

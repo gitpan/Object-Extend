@@ -19,8 +19,9 @@ no_index:
     - inc
 requires:
   Scalar::Util: 0
+  Storable: 2.05
 resources:
   repository: https://github.com/chocolateboy/Object-Extend
-version: v0.1.1
+version: v0.2.0
 x_test_requires:
   Test::More: 0
