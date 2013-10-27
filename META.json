@@ -33,17 +33,21 @@
       "runtime" : {
          "requires" : {
             "Scalar::Util" : "1.09",
-            "Storable" : "2.05"
+            "Storable" : "2.05",
+            "perl" : "5.008000"
          }
       }
    },
    "release_status" : "stable",
    "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/chocolateboy/Object-Extend/issues"
+      },
       "repository" : {
          "url" : "https://github.com/chocolateboy/Object-Extend"
       }
    },
-   "version" : "v0.3.0",
+   "version" : "v0.4.0",
    "x_test_requires" : {
       "Test::More" : 0
    }

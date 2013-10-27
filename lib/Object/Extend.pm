@@ -15,8 +15,8 @@ use Carp qw(confess);
 use Scalar::Util qw(blessed);
 use Storable qw(freeze);
 
-our @EXPORT_OK = qw(extend with);
-our $VERSION = '0.3.0';
+our @EXPORT_OK = qw(extend with SINGLETON);
+our $VERSION = '0.4.0';
 
 my $ID = 0;
 my %CACHE;
@@ -259,18 +259,19 @@ returns a hashref of method names/coderefs:
 
     extend $object => with { foo => sub { ... } };
 
-=head2 METHODS
-
 =head3 SINGLETON
 
 Every extended object's shim class includes an additional (empty) class in its C<@ISA> which indicates
-that the object has been extended. The name of this class can be accessed via the C<SINGLETON> method e.g.:
+that the object has been extended. The name of this class can be accessed by importing the C<SINGLETON>
+constant e.g.:
 
-    if ($object->isa(Object::Extend->SINGLETON)) { ... } # object extended with object-specific methods
+    use Object::Extend qw(SINGLETON);
+
+    if ($object->isa(SINGLETON)) { ... } # object extended with object-specific methods
 
 =head1 VERSION
 
-0.3.0
+0.4.0
 
 =head1 SEE ALSO
 
