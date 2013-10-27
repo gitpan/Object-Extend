@@ -19,7 +19,7 @@ my $SINGLETON = Object::Extend->SINGLETON();
 sub foo { 'Foo' }
 
 # try to trigger the reuse of a refaddr (i.e. C pointer)
-# and return the first object using a recycled refaddr
+# and return the first object that uses a recycled refaddr
 sub recycle(;%) {
     my %options = @_;
     my ($original_methods, $recycled_methods) = @options{qw(original recycled)};
@@ -27,7 +27,7 @@ sub recycle(;%) {
 
     for (1 .. ROUNDS) {
         my $object = bless {};
-        my $refaddr = sprintf('0x%x', refaddr($object));
+        my $refaddr = refaddr($object);
 
         if ($seen{$refaddr}) {
             $recycled = $object;
